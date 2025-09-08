@@ -1,0 +1,16 @@
+# Base Python dependencies for Payton Suite backend
+Django>=5.0,<6.0
+django-htmx>=1.17
+djangorestframework>=3.15
+psycopg[binary]>=3.1
+Pillow>=10.0
+django-storages>=1.14
+boto3>=1.26
+redis>=5.0
+celery>=5.3
+python-slugify>=8.0
+python-magic>=0.4
+django-filter>=24.2
+whitenoise>=6.5
+dj-database-url>=2.1
+

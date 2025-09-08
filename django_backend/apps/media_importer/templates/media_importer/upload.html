@@ -1,0 +1,7 @@
+<h1>Bulk Media Upload</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="files" multiple accept="image/*,.zip" />
+  <button type="submit">Upload</button>
+  <p>Accepted: images or .zip archives containing images.</p>
+</form>

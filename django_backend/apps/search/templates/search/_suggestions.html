@@ -1,0 +1,17 @@
+{% comment %} HTMX suggestions partial {% endcomment %} {% if groups %}
+<div class="omnibox-suggestions">
+  {% for group in groups %}
+  <div class="group">
+    <div class="title">{{ group.title }}</div>
+    <ul>
+      {% for item in group.items %}
+      <li>
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        <small>{{ item.meta }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
