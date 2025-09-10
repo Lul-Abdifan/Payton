@@ -1,0 +1,41 @@
+mutation AddLines($checkoutId: ID!, $lines: [CheckoutLineInput!]!) {
+  checkoutLinesAdd(checkoutId: $checkoutId, lines: $lines) {
+    checkout {
+      id
+      totalPrice {
+        gross {
+          amount
+          currency
+        }
+      }
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
+
+mutation SelectShippingMethod($checkoutId: ID!, $shippingMethodId: ID!) {
+  checkoutShippingMethodUpdate(checkoutId: $checkoutId, shippingMethodId: $shippingMethodId) {
+    checkout {
+      id
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
+
+mutation CompleteCheckout($checkoutId: ID!) {
+  checkoutComplete(checkoutId: $checkoutId) {
+    order {
+      id
+    }
+    errors {
+      field
+      message
+    }
+  }
+}

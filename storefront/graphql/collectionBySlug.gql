@@ -1,0 +1,24 @@
+query CollectionBySlug($slug: String!, $channel: String!, $first: Int) {
+  collection(slug: $slug, channel: $channel) {
+    id
+    name
+    slug
+    products(first: $first) {
+      edges {
+        node {
+          id
+          name
+          slug
+          pricing {
+            priceRangeUndiscounted {
+              start {
+                amount
+                currency
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

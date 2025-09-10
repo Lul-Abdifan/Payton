@@ -1,0 +1,11 @@
+mutation CreateCheckout($email: String, $channel: String!, $lines: [CheckoutLineInput!]!) {
+  checkoutCreate(input: { email: $email, channel: $channel, lines: $lines }) {
+    checkout {
+      id
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
